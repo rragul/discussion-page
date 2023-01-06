@@ -58,8 +58,45 @@ ion-icon{
     margin: 2rem 0;
 }
 
-.comment-body{
-    display: flex;
+.comment-box{
     align-items: center;
     margin: 1rem 0;
+}
+
+.comment-head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.comment-head span{
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    color: #646464;
+}
+
+.comment-body{
+    padding-left: 2rem;
+}
+
+.comment-body p{
+    margin-bottom: 1rem;
+}
+
+.upvote-button #up{
+    color: #5d5d5d;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.upvote-button{
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #5d5d5d;
+}
+
+.upvote-count{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #5d5d5d;
 }
