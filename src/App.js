@@ -1,15 +1,27 @@
-import './App.css';
+import React, {useState, useEffect} from "react";
+import "./App.css";
+import CommentForm from "./components/CommentForm";
+import Comments from "./components/Comments";
+import {getComments} from "./api";
 
 function App() {
+  const [comments, setComments] = useState([]);
+  const user = {
+    name: "Steve Jobs",
+    img: "https://i.pravatar.cc/150?img=13",
+    id: 10
+  };
+  useEffect(() => {
+   getComments().then((data) => {
+     setComments(data);
+   });
+  }, []);
   return (
     <div className="container">
       <div className="title">Discussion</div>
-      <div className="comment-form">
-        <img src="https://i.pravatar.cc/150?img=13" alt="avatar" />
-          <input type="text" id="comment" placeholder="What are your thoughts?"/>
-          <button className="comment-btn">Comment</button>
-      </div>
+      <CommentForm data={comments} user={user} parentId={null}/>
       <div className="line"></div>
+      <Comments comments={comments} user={user}/>
     </div>
   );
 }

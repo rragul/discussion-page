@@ -72,41 +72,59 @@ img {
   margin: 1rem 0;
 }
 
-.comment-head {
+.comment-header {
   display: flex;
   align-items: center;
   margin-bottom: 0.2rem;
 }
 
-.comment-head span {
+.comment-header .comment-author {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.comment-header .comment-date {
   margin-left: 0.5rem;
   font-size: 0.8rem;
   color: #646464;
 }
 
 .comment-body {
-  padding-left: 2rem;
+  margin-left: 3.2rem;
 }
 
-.comment-body p {
-  margin-bottom: 1rem;
+.comment-actions {
+  display: flex;
+  align-items: center;
+  margin-left: 3.2rem;
+  margin-top: 0.7rem;
 }
 
-.upvote-button #up {
-  color: #5d5d5d;
-  font-size: 0.8rem;
-  text-align: center;
-}
-
-.upvote-button {
+.comment-upvote{
   cursor: pointer;
   font-size: 0.8rem;
   font-weight: 700;
   color: #5d5d5d;
+  margin-right: 0.5rem;
 }
 
-.upvote-count {
+.comment-upvote-count {
   font-size: 0.8rem;
   font-weight: 700;
   color: #5d5d5d;
+}
+
+.comment-reply {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #5d5d5d;
+  margin-left: 1rem;
+}
+
+.comment-replies {
+  margin-left: 3.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
