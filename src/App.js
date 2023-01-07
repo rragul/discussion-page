@@ -11,6 +11,11 @@ function App() {
     img: "https://i.pravatar.cc/150?img=13",
     id: 10
   };
+
+  function setToComments (data){
+    const newComments = [...comments, data];
+    setComments(newComments);
+  }
   useEffect(() => {
    getComments().then((data) => {
      setComments(data);
@@ -19,9 +24,9 @@ function App() {
   return (
     <div className="container">
       <div className="title">Discussion</div>
-      <CommentForm data={comments} user={user} parentId={null}/>
+      <CommentForm data={comments} user={user} parentId={null} setToComments = {setToComments}/>
       <div className="line"></div>
-      <Comments comments={comments} user={user}/>
+      <Comments comments={comments} user={user} />
     </div>
   );
 }
