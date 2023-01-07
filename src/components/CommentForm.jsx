@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CommentForm = ({ data, user, parentId }) => {
+const CommentForm = ({ data, user, parentId, setToComments }) => {
   const [commentBody, setCommentBody] = useState("");
   const time = new Date()
     .toTimeString()
@@ -29,6 +29,7 @@ const CommentForm = ({ data, user, parentId }) => {
       parentId: parentId,
     };
     console.log(commentData);
+    setToComments(commentData);
     data = [...data, commentData];
     setCommentBody("");
   };
