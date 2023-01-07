@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const CommentForm = ({ data, user, parentId, setToComments }) => {
+const CommentForm = ({ user, parentId}) => {
   const [commentBody, setCommentBody] = useState("");
+
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+   fetch("http://localhost:3500/comments").then(
+      (response) => response.json()
+    ).then(
+      (data) => setComments(data)
+   )
+  }, [comments]);
+
   const time = new Date()
     .toTimeString()
     .replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
@@ -19,7 +30,7 @@ const CommentForm = ({ data, user, parentId, setToComments }) => {
   const OnClick = (e) => {
     e.preventDefault();
     const commentData = {
-      id: data.length + 1,
+      id: comments.length + 1,
       img: user.img,
       comment: commentBody,
       timestamp: timestamp,
@@ -28,9 +39,13 @@ const CommentForm = ({ data, user, parentId, setToComments }) => {
       upvotes: 0,
       parentId: parentId,
     };
-    console.log(commentData);
-    setToComments(commentData);
-    data = [...data, commentData];
+    fetch("http://localhost:3500/comments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(commentData),
+    })
     setCommentBody("");
   };
   return (

@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "comment": "This is a comment",
+      "author": "John Doe",
+      "authorId": 1,
+      "timestamp": "2023-1-1 12:00:00",
+      "img": "https://i.pravatar.cc/150?img=14",
+      "parentId": null,
+      "upvotes": 2
+    },
+    {
+      "id": 2,
+      "comment": "This is another comment",
+      "author": "Will Smith",
+      "authorId": 2,
+      "timestamp": "2023-1-5 12:00:00",
+      "img": "https://i.pravatar.cc/150?img=15",
+      "parentId": null,
+      "upvotes": 3
+    },
+    {
+      "id": 3,
+      "comment": "This is a reply",
+      "author": "Jane Doe",
+      "authorId": 3,
+      "timestamp": "2023-1-5 12:00:00",
+      "img": "https://i.pravatar.cc/150?img=16",
+      "parentId": 1,
+      "upvotes": 0
+    },
+    {
+      "id": 4,
+      "img": "https://i.pravatar.cc/150?img=13",
+      "comment": "New comment",
+      "timestamp": "2023-1-7 16:05:17",
+      "author": "Steve Jobs",
+      "authorId": 10,
+      "upvotes": 0,
+      "parentId": null
+    },
+    {
+      "id": 5,
+      "img": "https://i.pravatar.cc/150?img=13",
+      "comment": "Second comment",
+      "timestamp": "2023-1-7 16:06:18",
+      "author": "Steve Jobs",
+      "authorId": 10,
+      "upvotes": 0,
+      "parentId": null
+    },
+    {
+      "id": 6,
+      "img": "https://i.pravatar.cc/150?img=13",
+      "comment": "Third Comment",
+      "timestamp": "2023-1-8 01:04:40",
+      "author": "Steve Jobs",
+      "authorId": 10,
+      "upvotes": 0,
+      "parentId": null
+    },
+    {
+      "id": 7,
+      "img": "https://i.pravatar.cc/150?img=13",
+      "comment": "My reply",
+      "timestamp": "2023-1-8 01:15:49",
+      "author": "Steve Jobs",
+      "authorId": 10,
+      "upvotes": 0,
+      "parentId": 1
+    },
+    {
+      "id": 8,
+      "img": "https://i.pravatar.cc/150?img=13",
+      "comment": "Jeepers now that's a huge release with some big community earnings to back it - it must be so rewarding seeing creators quit their day jobs after monetizing (with real MRR) on the new platform.",
+      "timestamp": "2023-1-8 01:20:45",
+      "author": "Steve Jobs",
+      "authorId": 10,
+      "upvotes": 0,
+      "parentId": null
+    }
+  ]
+}
