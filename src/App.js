@@ -12,7 +12,7 @@ function App() {
   };
 
   useEffect(() => {
-   fetch("/comments").then(
+   fetch("https://server-p7ok.onrender.com/comments").then(
       (response) => response.json()
     ).then(
       (data) => setComments(data)

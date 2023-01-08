@@ -8,7 +8,7 @@ const Comment = ({ comment, replies, user }) => {
     setClickReply(!clickReply);
   };
   const addUpvote = () => {
-    fetch(`/comments/${comment.id}`, {
+    fetch(`https://server-p7ok.onrender.com/comments/${comment.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
