@@ -8,7 +8,7 @@ const Comment = ({ comment, replies, user }) => {
     setClickReply(!clickReply);
   };
   const addUpvote = () => {
-    fetch(`http://localhost:3500/comments/${comment.id}`, {
+    fetch(`/comments/${comment.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

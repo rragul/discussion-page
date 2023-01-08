@@ -12,7 +12,7 @@ function App() {
   };
 
   useEffect(() => {
-   fetch("http://localhost:3500/comments").then(
+   fetch("/comments").then(
       (response) => response.json()
     ).then(
       (data) => setComments(data)
