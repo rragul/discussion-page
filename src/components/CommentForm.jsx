@@ -6,12 +6,12 @@ const CommentForm = ({ user, parentId}) => {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-   fetch("/comments").then(
+   fetch("https://server-p7ok.onrender.com/comments").then(
       (response) => response.json()
     ).then(
       (data) => setComments(data)
    )
-  }, [comments]);
+  }, []);
 
   const time = new Date()
     .toTimeString()
@@ -39,7 +39,7 @@ const CommentForm = ({ user, parentId}) => {
       upvotes: 0,
       parentId: parentId,
     };
-    fetch("http://localhost:3500/comments", {
+    fetch("https://server-p7ok.onrender.com/comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
